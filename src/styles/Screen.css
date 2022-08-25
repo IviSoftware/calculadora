@@ -1,0 +1,13 @@
+.Screen{
+  height: 100px;
+  background-color: rgb(69, 69, 69);
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-radius: 0 0 20px 20px ;
+  font-size: 40px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+  overflow:hidden
+}

@@ -1,0 +1,12 @@
+.AccountButton{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(103, 36, 211);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }

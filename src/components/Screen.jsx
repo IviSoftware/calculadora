@@ -14,13 +14,15 @@ function Screen() {
           <p>{simbolState}</p>
         )}
 
+        {result != null && (
+          <p>{result}</p>
+        )}
+
         {(simbolState != '') && (
           <p>{numberStateTwo}</p>
         )}
 
-        {result != 0 && (
-          <p>{result}</p>
-        )}
+        
     </div>
   )
 }

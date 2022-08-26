@@ -4,7 +4,17 @@ import '../styles/AccountButton.css';
 
 function NumberButton({simbol,isSimbol}) {
 
-  const {setSimbolState,clearStates,sum,numberState,numberStateTwo, simbolState} = useContext(AppContext);
+  const {
+    setSimbolState,
+    clearStates,
+    sum,
+    numberState,
+    numberStateTwo,
+    simbolState,
+    rest,
+    multi,
+    divider
+  } = useContext(AppContext);
 
 
   const clearScreen = ()=>{
@@ -33,9 +43,21 @@ function NumberButton({simbol,isSimbol}) {
         case '=':
           switch (simbolState) {
             case '+':
-            const nums = plainNumbers(numberState,numberStateTwo)
-            sum(nums[0],nums[1]);
-              break;
+              const nums = plainNumbers(numberState,numberStateTwo)
+              sum(nums[0],nums[1]);
+            break;
+            case '-':
+              const numsrest = plainNumbers(numberState,numberStateTwo)
+              rest(numsrest[0],numsrest[1]);
+            break;
+            case 'x':
+              const numsMulti = plainNumbers(numberState,numberStateTwo)
+              multi(numsMulti[0],numsMulti[1]);
+            break;
+            case '/':
+              const numsDiv = plainNumbers(numberState,numberStateTwo)
+              divider(numsDiv[0],numsDiv[1]);
+            break;
           }
           break;
       }

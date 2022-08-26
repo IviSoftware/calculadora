@@ -9,7 +9,7 @@ function Buttons() {
       <div className='NumberButtons'>
         <AccountButton simbol={'clear'} isSimbol={false} />
         <AccountButton simbol={''} isSimbol={false} />
-        <AccountButton simbol={'%'} isSimbol={true} />
+        <AccountButton simbol={''}  />
         <AccountButton simbol={'/'} isSimbol={true} />
 
         <NumberButton number={"1"} />
@@ -28,7 +28,7 @@ function Buttons() {
         <AccountButton simbol={'+'} isSimbol={true} />
 
         <NumberButton number={"0"} />
-        <AccountButton simbol={'.'} isSimbol={false} />
+        <AccountButton simbol={''}  />
         <AccountButton simbol={'delete'} isSimbol={false} />
         <AccountButton simbol={'='} isSimbol={false} />
       </div>

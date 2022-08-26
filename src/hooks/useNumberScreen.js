@@ -5,7 +5,7 @@ function useNumberScreen(){
   const [numberStateTwo,setNumberStateTwo] = useState([]);
   const [simbolState,setSimbolState] = useState('');
 
-  const [result,setResult] = useState(0);
+  const [result,setResult] = useState(null);
   
   const setPrintNumber = (numberToPrint)=>{
     setNumberState([
@@ -26,7 +26,7 @@ function useNumberScreen(){
     setNumberState([])
     setNumberStateTwo([])
     setSimbolState('')
-    setResult(0)
+    setResult(null)
   }
 
 
@@ -39,8 +39,31 @@ function useNumberScreen(){
   const sum = (num1,num2)=>{
      setResult(num1 + num2)
      clearNumbers()
+     
   }
+
+  const rest = (num1,num2)=>{
+    setResult(num1 - num2)
+    clearNumbers()
+ }
   
+ const multi = (num1,num2)=>{
+  setResult(num1 * num2)
+  clearNumbers()
+}
+
+const divider = (num1,num2)=>{
+
+  if(num2 == 0){
+    setResult('Error, 0 no divider')
+    clearNumbers()
+  }else{
+    setResult(num1 / num2)
+    clearNumbers()
+  }
+
+ 
+}
 
 
   return {
@@ -52,7 +75,10 @@ function useNumberScreen(){
     setPrintNumberTwo,
     clearStates,
     result,
-    sum
+    sum,
+    rest,
+    multi,
+    divider
   }
 
 }

@@ -4,12 +4,20 @@ import AppContext from '../context/AppContext';
 
 function NumberButton({number}) {
 
-  const {setPrintNumber} = useContext(AppContext);
+  const {setPrintNumber,simbolState,setPrintNumberTwo} = useContext(AppContext);
+
+  const sendNumberScreen = ()=>{
+    if(simbolState!=''){
+      setPrintNumberTwo(number)
+    }else{
+      setPrintNumber(number)
+    }
+  }
   
   return (
     <div 
     className='NumberButton'
-    onClick={()=>setPrintNumber(number)}
+    onClick={sendNumberScreen}
     >
         <p>{number}</p>
     </div>

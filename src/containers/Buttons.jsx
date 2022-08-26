@@ -7,30 +7,30 @@ function Buttons() {
     <div className='Buttons'>
 
       <div className='NumberButtons'>
-        <AccountButton simbol={'clear'} />
-        <AccountButton simbol={''} />
-        <AccountButton simbol={'%'} />
-        <AccountButton simbol={'/'} />
+        <AccountButton simbol={'clear'} isSimbol={false} />
+        <AccountButton simbol={''} isSimbol={false} />
+        <AccountButton simbol={'%'} isSimbol={true} />
+        <AccountButton simbol={'/'} isSimbol={true} />
 
-        <NumberButton number={1} />
-        <NumberButton number={2} />
-        <NumberButton number={3}/>
-        <AccountButton simbol={'x'} />
+        <NumberButton number={"1"} />
+        <NumberButton number={"2"} />
+        <NumberButton number={"3"}/>
+        <AccountButton simbol={'x'} isSimbol={true} />
 
-        <NumberButton number={4} />
-        <NumberButton number={5} />
-        <NumberButton number={6} />
-        <AccountButton simbol={'-'} />
+        <NumberButton number={"4"} />
+        <NumberButton number={"5"} />
+        <NumberButton number={"6"} />
+        <AccountButton simbol={'-'} isSimbol={true} />
 
-        <NumberButton number={7} />
-        <NumberButton number={8} />
-        <NumberButton number={9} />
-        <AccountButton simbol={'+'} />
+        <NumberButton number={"7"} />
+        <NumberButton number={"8"} />
+        <NumberButton number={"9"} />
+        <AccountButton simbol={'+'} isSimbol={true} />
 
-        <NumberButton number={0} />
-        <AccountButton simbol={'.'} />
-        <AccountButton simbol={'delete'} />
-        <AccountButton simbol={'='} />
+        <NumberButton number={"0"} />
+        <AccountButton simbol={'.'} isSimbol={false} />
+        <AccountButton simbol={'delete'} isSimbol={false} />
+        <AccountButton simbol={'='} isSimbol={false} />
       </div>
 
       <div className='lateralBar'>

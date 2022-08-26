@@ -4,13 +4,24 @@ import AppContext from '../context/AppContext';
 
 function NumberButton({number}) {
 
-  const {setPrintNumber,simbolState,setPrintNumberTwo} = useContext(AppContext);
+  const {
+    setPrintNumber,
+    simbolState,
+    setPrintNumberTwo,
+    result,
+    clearStates
+  } = useContext(AppContext);
 
   const sendNumberScreen = ()=>{
-    if(simbolState!=''){
+    if(simbolState!=''){ // si hay un signo entonces envia al numero 2
       setPrintNumberTwo(number)
     }else{
-      setPrintNumber(number)
+      if(result != null){ // si ya hay un resultado en pantalla
+        clearStates()
+        setPrintNumber(number)
+      }else{
+        setPrintNumber(number)
+      }
     }
   }
   

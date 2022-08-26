@@ -13,7 +13,8 @@ function NumberButton({simbol,isSimbol}) {
     simbolState,
     rest,
     multi,
-    divider
+    divider,
+    result
   } = useContext(AppContext);
 
 
@@ -30,7 +31,11 @@ function NumberButton({simbol,isSimbol}) {
   const changeSimbol=()=>{
 
     if(isSimbol){
-      setSimbolState(simbol);
+      if( result != null || numberState.length <= 0){
+        clearScreen();
+      }else{
+        setSimbolState(simbol);
+      }
       /* setAccountsNumber(accountsNumber + 1); */
 
     }else{
